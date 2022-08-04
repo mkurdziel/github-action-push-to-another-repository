@@ -49,6 +49,9 @@ The directory to wipe and replace in the target repository.  Defaults to wiping 
 ### `SSH_DEPLOY_KEY` or `API_TOKEN_GITHUB`
 The action, entirely executed in your GitHub continuous integration environment, needs to be able to push to the destination repository.
 
+### `tag` (argument) [optional]
+Optional tag to deploy to the destination repository
+
 There are two options to do this:
  * Create an SSH deploy key. This key is restricted to the destination repository only
  * Create a GitHub Personal Authentication Token: the token has access to all your repositories
