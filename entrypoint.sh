@@ -29,7 +29,7 @@ fi
 
 # Verify that there (potentially) some access to the destination repository
 # and set up git (with GIT_CMD variable) and GIT_CMD_REPOSITORY
-if [ -n "${SSH_DEPLOY_KEY:=}" ]
+if [ "${SSH_DEPLOY_KEY:=}" ]
 then
 	echo "[+] Using SSH_DEPLOY_KEY"
 
@@ -149,7 +149,7 @@ echo "[+] Pushing git commit"
 # --set-upstream: sets de branch when pushing to a branch that does not exist
 git push "$GIT_CMD_REPOSITORY" --set-upstream "$TARGET_BRANCH"
 
-if [ -z "$TAG" ]
+if [ ! -z "$TAG" ]
 then
   echo "[+] Tagging branch"
   git tag "$TAG"

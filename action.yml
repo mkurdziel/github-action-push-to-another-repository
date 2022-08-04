@@ -51,6 +51,7 @@ inputs:
   tag:
     description: >-
       [Optional] tag to push to the output repository.
+    default: ''
     required: false
 
 runs:
